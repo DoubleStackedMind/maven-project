@@ -25,12 +25,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-               sh label: '', script: 'mvn install'
+               bat label: '', script: 'mvn install'
    }
         }
         stage('Test') {
             steps {
-                sh label: '', script: 'mvn test'
+                bat label: '', script: 'mvn test'
             }
         }
         stage("Deploy") {
